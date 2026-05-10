@@ -2,8 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  --bg: #09090b;
+  --surface: #121214;
+  --surface-2: #18181b;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #e4e4e7;
+  --muted: #a1a1aa;
+  --danger: #f87171;
+}
+
 body {
   margin: 0;
   overflow: hidden;
-  background-color: #111827; /* Dark background default */
+  background-color: var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 24px 48px rgba(0, 0, 0, 0.45);
+  }
 }
